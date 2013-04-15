@@ -45,7 +45,12 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<div id="content">
 
 			<?php echo $this->Session->flash(); ?>
-
+			=========================<br/>
+			<form name="input" action="http://localhost/Corkboard/user/" method="GET">
+				<input type="hidden" name="_method" value="put" />
+				<input type="text" name="user">
+			</form>
+			=========================<br/>
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
