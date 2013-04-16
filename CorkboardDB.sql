@@ -8,8 +8,11 @@ CREATE TABLE users (
 	lastname varchar(128)
 );
 
+<<<<<<< HEAD
 CREATE SEQUENCE users_id_seq START 8;
 
+=======
+>>>>>>> 799f1009ecbc105572106edd6e44ac7d7eac6482
 CREATE TABLE courses (
     courseid serial PRIMARY KEY,
     instructorid integer REFERENCES users,

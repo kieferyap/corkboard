@@ -15,7 +15,14 @@
  * @package       app.View.Layouts
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+<<<<<<< HEAD
 
+=======
+ */
+
+$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+?>
+>>>>>>> 799f1009ecbc105572106edd6e44ac7d7eac6482
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +40,10 @@
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+<<<<<<< HEAD
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+=======
+>>>>>>> 799f1009ecbc105572106edd6e44ac7d7eac6482
 </head>
 <body>
 	<div id="container">
@@ -44,9 +54,15 @@
 
 			<?php echo $this->Session->flash(); ?>
 			=========================<br/>
+<<<<<<< HEAD
 			<form name="input" action="http://localhost/corkboard/usercourse/" method="get">
 				<input type="text" name="courseid"/>
 				<input type="button" value="submit" onclick="$(this).parents().filter('form').trigger('submit');"/>
+=======
+			<form name="input" action="http://localhost/Corkboard/user/" method="GET">
+				<input type="hidden" name="_method" value="put" />
+				<input type="text" name="user">
+>>>>>>> 799f1009ecbc105572106edd6e44ac7d7eac6482
 			</form>
 			=========================<br/>
 			<?php echo $this->fetch('content'); ?>
@@ -63,8 +79,11 @@
 	<?php echo $this->element('sql_dump'); ?>
 </body>
 </html>
+<<<<<<< HEAD
  */
 
 $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
 ?>
 Welcome to the API.
+=======
+>>>>>>> 799f1009ecbc105572106edd6e44ac7d7eac6482
