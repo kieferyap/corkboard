@@ -2,12 +2,19 @@
 class UsercourseController extends AppController {
 
 	public function index() {
-		//URL: http://site.com/usercourse/?courseid=1
+		//URL: http://site.com/usercourse/?courseid=1&is_users=1 OR http://site.com/usercourse/?userid=1&is_users=0
 		//Returns the entry in the DB in JSON.
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
-			$course = $this->Usercourse->query('SELECT * FROM users JOIN usercourses USING (userid) WHERE courseid = '.$_GET['courseid'].';');
-			$course_json = json_encode($course);
-			echo $course_json;
+			if($_GET['is_users'] == 1){
+				$course = $this->Usercourse->query('SELECT * FROM users JOIN usercourses USING (userid) WHERE courseid = '.$_GET['courseid'].';');
+				$course_json = json_encode($course);
+				echo $course_json;
+			}
+			else{
+				$classes = $this->Usercourse->query('SELECT courseid FROM usercourses WHERE userid = '.$_GET['userid'].';');
+				$classes_json = json_encode($classes);
+				echo $classes_json;
+			}
 		}
 		
 		/* The name of the keys of the data you pass via POST and PUT 

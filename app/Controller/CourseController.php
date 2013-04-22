@@ -1,7 +1,6 @@
 <?php
 class CourseController extends AppController {
 
-<<<<<<< HEAD
 	public function index() {
 		//URL: http://site.com/course/?courseid=1
 		//Returns the entry in the DB in JSON.
@@ -51,10 +50,5 @@ class CourseController extends AppController {
 		
 		die();
     }
-=======
-	public function test(){
-		echo 'Here!'; die();
-	}
->>>>>>> 799f1009ecbc105572106edd6e44ac7d7eac6482
 
 }
